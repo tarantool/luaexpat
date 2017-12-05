@@ -1,7 +1,8 @@
 package = "LuaExpat"
-version = "1.3.0-1"
-source = {
-   url = "http://matthewwild.co.uk/projects/luaexpat/luaexpat-1.3.0.tar.gz"
+version = "scm-1"
+source  = {
+    url    = 'git://github.com/tarantool/luaexpat.git',
+    branch = 'master',
 }
 description = {
    summary = "XML Expat parsing",
@@ -23,7 +24,7 @@ external_dependencies = {
 build = {
    type = "builtin",
    modules = {
-    lxp = { 
+    lxp = {
       sources = { "src/lxplib.c" },
       libraries = { "expat" },
       incdirs = { "$(EXPAT_INCDIR)", "src/" },
